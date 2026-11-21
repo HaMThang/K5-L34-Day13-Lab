@@ -9,18 +9,6 @@ Các file quy định chính nằm ở root repo: [README.md](../README.md), [RU
 | `Ngay13_Lab13_De_bai_hoc_vien.docx` | Đề bài Lab 13 bản gốc, có 20 ca lỗi của nhiệm vụ C và khung `pilot_plan.yaml` | CP3, CP4 |
 | `Ngay13_Huong_dan_hoc_vien.docx` | Hướng dẫn học viên cả ngày: lịch, công thức, cách tổ chức nhóm, cách chấm | Trước buổi học |
 | `Ngay13_Slide_Launch_Economics.pdf` | Slide buổi sáng | Khi cần xem lại lý thuyết |
-| `example.zip` | **Bài làm mẫu** đầy đủ (thư mục `bai_nop/`) | Sau khi tự làm xong, để đối chiếu |
 
 Cấu trúc nộp và deadline theo [SUBMISSION.md](../SUBMISSION.md). Mục "Thư mục nộp" trong tài liệu gốc (thư mục `lop_nhom`) được thay bằng repo nhóm.
 
-## Bài làm mẫu
-
-Nên tự làm trước rồi mới mở. Chạy ở gốc repo:
-
-```bash
-unzip docs/example.zip -d example && cd example/bai_nop
-cp ../../src/logix_*.csv .           # lab13.py đọc CSV ở cùng thư mục hoặc thư mục cha
-python3 lab13.py
-```
-
-Thư mục `example/` đã có trong `.gitignore`, không commit.

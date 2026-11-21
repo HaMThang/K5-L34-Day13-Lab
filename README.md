@@ -74,7 +74,7 @@ Trong lúc làm: [docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md](docs/Lab13_Huong_
 | `README.md`, `RULES.md`, `CHECKPOINTS.md`, `RUBRIC.md`, `SUBMISSION.md` | Đề bài, luật, checkpoint, cách chấm, cách nộp |
 | `TEAM.md` | Thông tin nhóm, thành viên, vai và đóng góp |
 | `src/` | Bài làm `lab13.py` (học viên viết vào đây), bản gốc `lab13_starter.py`, hai file CSV, `requirements.txt` |
-| `docs/` | Dữ liệu và công thức, hướng dẫn chi tiết, đề bài gốc (docx), slide, bài làm mẫu `example.zip` |
+| `docs/` | Dữ liệu và công thức, hướng dẫn chi tiết, đề bài gốc (docx), slide |
 | `report/team/` | Mẫu các file hồ sơ nhóm phải nộp và báo cáo từng thành viên |
 
 ## Báo cáo phải nộp

@@ -7,6 +7,7 @@ __pycache__/
 .DS_Store
 .venv/
 venv/
-# Thư mục giải nén bài làm mẫu (docs/example.zip), không commit
+# Bài làm mẫu (có đáp án) không đưa vào repo đề bài
+example.zip
 example/
 __MACOSX/

@@ -56,7 +56,7 @@ git push -u origin main
 | `report/team/group_report.md` | Báo cáo nhóm ngắn |
 | `report/team/MSSV_HoTen.md` | Mỗi thành viên một file, copy từ mẫu và đổi tên, ví dụ `report/team/20241234_NguyenVanAn.md` |
 
-Không commit `.venv/`, `.env` hay thư mục `example/`.
+Không commit `.venv/` hay `.env`.
 
 ## Mốc tại lớp
 

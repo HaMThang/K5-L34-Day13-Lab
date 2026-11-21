@@ -14,14 +14,13 @@
 - Ghi nguồn khi dùng code, dữ liệu hoặc tài liệu bên ngoài.
 - Bài nhóm phải ghi rõ đóng góp của từng thành viên trong `TEAM.md`.
 - Nhiệm vụ C: hai người gắn nhãn phải gắn độc lập, không trao đổi, trước khi so nhãn. Không sửa bộ nhãn độc lập sau khi đã so.
-- Bài làm mẫu `docs/example.zip`: tự làm trước rồi mới mở để đối chiếu. Không nộp lại nội dung bài mẫu như bài của nhóm.
 - Không sửa hai file dữ liệu `src/logix_runs.csv`, `src/logix_requests.csv`.
 - Mọi con số tính từ cột `_simulated` ghi nhãn `simulated`. Không dùng từ "production" trong hồ sơ.
 
 ## Secret và API key
 
 - Lab chạy offline, không cần API key. Không commit API key, password hoặc file `.env`.
-- Không commit `.venv/` hay thư mục giải nén bài mẫu `example/` (đã có trong `.gitignore`).
+- Không commit `.venv/` (đã có trong `.gitignore`).
 
 ## Nộp muộn và lỗi kỹ thuật
 

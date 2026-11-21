@@ -38,6 +38,15 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 
 - Loại nào không đáng để trợ lý xử lý? Với loại đó, cho chạy lại tới 3 lần có giúp không? ...
 
+## A4 · Chi phí cố định (phạm vi noi_dia + hang_nang)
+
+| Khối lượng | Việc thành công mỗi tháng | Chi phí cố định mỗi việc | Chi phí mỗi việc thành công + cố định | So với 12.000 đ |
+| --- | ---: | ---: | ---: | ---: |
+| 45.000 yêu cầu/tháng | ... | ... | ... | ... |
+| Một nửa khối lượng | ... | ... | ... | ... |
+
+- Chi phí cố định có đổi kết luận không? Ở khối lượng nào? ...
+
 ## B1 · Đổi từng yếu tố
 
 | Kịch bản | Cách tính | Chi phí mỗi việc thành công | Thay đổi (%) |
