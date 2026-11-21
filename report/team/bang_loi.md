@@ -43,9 +43,9 @@ Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định 
 Cách phát hiện phải đo được (event, ngưỡng, tần suất). Người phụ trách là một vai trò, không ghi "cả đội".
 
 | Ca | Loại lỗi | Phát hiện bằng gì | Khắc phục thế nào | Ai phụ trách |
-| --: | --- | --- | --- | --- |
-| ... | Do người dùng | ... | ... | ... |
-| ... | Hệ thống | ... | ... | ... |
-| ... | Ngữ cảnh | ... | ... | ... |
-| ... | Giới hạn hệ thống | ... | ... | ... |
-| ... | Ngầm | ... | ... | ... |
+|---:|---|---|---|---|
+| 9 | Do người dùng | Theo dõi event `input_validation_failed`; cảnh báo nếu tỷ lệ vượt 2% yêu cầu/ngày. | Nhận diện mã đơn sàn thương mại điện tử; hướng dẫn khách nhập mã vận đơn hoặc gửi ảnh minh họa. | PM trợ lý hoàn phí |
+| 7 | Hệ thống | Đối soát mỗi giờ: thông báo “đã hoàn” phải có bản ghi ledger `ok` cùng `trace_id`; ngưỡng sai lệch là 0. | Chỉ thông báo hoàn tất khi ledger xác nhận thành công; sau 3 lần lỗi 503 thì báo đang xử lý và chuyển nhân viên. | Lead Agent Engineer |
+| 18 | Ngữ cảnh | Theo dõi hàng tuần tỷ lệ mở lại do khách thắc mắc số tiền hoàn dù phép tính đúng. | Hiển thị phép tính rõ ràng: `30.000đ × 50% = 15.000đ`. | Trưởng nhóm CSKH |
+| 4 | Giới hạn hệ thống | Ghi event `handoff_to_staff`, reason `thieu_du_lieu`; theo dõi số ca quốc tế cần chuyển. | Chuyển nhân viên kèm tóm tắt; loại `quoc_te` khỏi phạm vi pilot. | PM trợ lý hoàn phí |
+| 17 | Ngầm | Đối soát 100 đơn/tuần với bảng giá hiện hành; cảnh báo nếu tỷ lệ sai giá vượt 1%. | Xóa cache khi cập nhật bảng giá và ghi phiên bản bảng giá được dùng trong trace. | Kế toán trưởng |
