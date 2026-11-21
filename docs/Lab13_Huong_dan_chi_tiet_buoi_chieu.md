@@ -2,6 +2,8 @@
 
 *Định giá agent và lập kế hoạch pilot (Gate 2a) · 14:00–18:00*
 
+> Trong repo này, code và hai file CSV nằm trong `src/` (chạy lệnh trong `src/`); các file hồ sơ nộp trong `report/team/`. Cấu trúc nộp và deadline theo [SUBMISSION.md](../SUBMISSION.md), thay cho mục "Thư mục nộp" ở cuối tài liệu này.
+
 Buổi chiều có 4 tiếng (14:00–18:00). Cuối buổi, mỗi nhóm nộp một bộ hồ sơ launch v0 cho trợ lý hoàn phí của LogiX-VN và bảo vệ nó trước hội đồng Gate 2a. Tài liệu này đi từng bước qua 5 nhiệm vụ A–E. Mỗi nhiệm vụ có cách làm, đoạn code mẫu, số để tự đối chiếu và lỗi hay gặp. Số đối chiếu được nhận nếu lệch không quá 2%.
 
 ## Tổng quan và chuẩn bị
