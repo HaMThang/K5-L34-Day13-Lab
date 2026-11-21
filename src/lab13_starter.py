@@ -1,6 +1,7 @@
 """Lab 13 · Định giá agent và lập kế hoạch pilot (Gate 2a) — file khởi đầu cho học viên.
-Chạy: python3 lab13_starter.py   (cần pandas; Nhiệm vụ D cần thêm statsmodels)
-Không cần khoá API. Điền các chỗ ghi VIẾT Ở ĐÂY. Dữ liệu trong hai file CSV là giả lập.
+Chạy trong thư mục src/: python3 lab13_starter.py   (cần pandas; Nhiệm vụ D cần thêm statsmodels)
+Không cần khoá API. Điền các chỗ ghi VIẾT Ở ĐÂY (đánh dấu TODO CP1…CP4). Dữ liệu trong hai file CSV là giả lập.
+Bài nộp là src/lab13.py: copy file này thành lab13.py rồi viết vào lab13.py (xem CHECKPOINTS.md).
 """
 import math
 import pandas as pd
@@ -14,6 +15,7 @@ BASELINE = 12000    # đồng cho 1 yêu cầu khi nhân viên tự làm (6 phú
 
 
 # ---------- Nhiệm vụ A1 · Kinh tế của việc chạy lại ----------
+# TODO CP1: viết ba hàm dưới đây cho tới khi kiem_tra_dap_an_biet_truoc() in ĐẠT.
 def so_lan_chay_ky_vong(p, k=None):
     """Số lần chạy trung bình cho 1 yêu cầu khi mỗi lần đúng với xác suất p.
     k = số lần chạy tối đa; k=None nghĩa là chạy lại đến khi đúng."""
@@ -39,6 +41,7 @@ def kiem_tra_dap_an_biet_truoc():
 
 
 # ---------- Nhiệm vụ A2 · Mô hình chi phí từ trace ----------
+# TODO CP1: viết mo_hinh; CP2 gọi lại hàm này với tham số giá và hệ số đã đổi.
 def mo_hinh(runs, reqs, gia_vao=26, gia_ra=130, gia_tool=15, luong_phut=2000,
             he_so_xem_lai=1.0, he_so_lam_lai=1.0, max_lan_chay=None):
     """Trả về dict gồm: token, tool, xem_lai, lam_lai, tong, thanh_cong, cps (chi phí mỗi việc thành công).
@@ -57,8 +60,8 @@ if __name__ == '__main__':
     ket_qua = mo_hinh(runs, reqs)
     for ten, gia_tri in ket_qua.items():
         print(f'{ten:12s} {gia_tri:>14,.0f}')
-    # Nhiệm vụ A3: tính lại theo từng giá trị của cột loai.
-    # Nhiệm vụ B: đổi từng yếu tố, ghi vào bảng độ nhạy.
-    # Nhiệm vụ D: cỡ mẫu.
+    # TODO CP1 · Nhiệm vụ A3: tính lại theo từng giá trị của cột loai.
+    # TODO CP2 · Nhiệm vụ B: đổi từng yếu tố, ghi vào bảng độ nhạy.
+    # TODO CP4 · Nhiệm vụ D: cỡ mẫu.
     #   from statsmodels.stats.proportion import proportion_effectsize
     #   from statsmodels.stats.power import NormalIndPower

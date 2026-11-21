@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.venv/
+venv/
+# Thư mục giải nén bài làm mẫu (docs/example.zip), không commit
+example/
+__MACOSX/
