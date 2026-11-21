@@ -10,20 +10,19 @@
 ## 2. Phần việc phụ trách
 
 - Phụ trách code mô hình phân tích chi phí trong `src/lab13.py`.
-- Phối hợp hoàn thiện và rà soát bảng chi phí trong `report/team/bang_chi_phi.md`.
+- Tổng hợp kết quả từ chương trình và điền các phần A, B trong `report/team/bang_chi_phi.md`.
 
 ## 3. Đóng góp cụ thể
 
-- Hoàn thiện các hàm A1 tính số lần chạy kỳ vọng, xác suất thành công và hệ số chi phí mỗi việc thành công.
-- Triển khai hàm mô hình chi phí A2, gồm chi phí token, tool, xem lại, làm lại và chi phí trên mỗi việc thành công.
-- Tính và trình bày kết quả theo loại yêu cầu ở A3, chi phí cố định ở A4, cùng các kịch bản độ nhạy B1–B4.
-- Đối chiếu kết quả với dữ liệu CSV và các số tham khảo của hướng dẫn lab; ghi nhãn `simulated` cho các kết quả có dùng số phút giả lập.
+- Hoàn thiện các hàm A1 và mô hình chi phí A2; triển khai phân tích theo loại yêu cầu A3, chi phí cố định A4, các kịch bản B1–B4 và phép tính cỡ mẫu D1.
+- Tổng hợp kết quả vào bảng chi phí, ghi nhãn `simulated` cho các khoản tính từ số phút giả lập.
+- Đối chiếu kết quả chương trình với dữ liệu CSV và số tham khảo trong hướng dẫn lab.
 
 ## 4. Bằng chứng
 
-- Code và các kết quả tính: `src/lab13.py`.
+- Code và kết quả tính A1–D1: `src/lab13.py`.
 - Bảng kết quả A2–A4 và B1–B4: `report/team/bang_chi_phi.md`.
-- Chương trình được chạy từ thư mục `src/`; ba phép thử A1 đạt. Kết quả A2 gồm 245.585 đ tiền token, 84.000 đ tiền tool, 1.780.000 đ xem lại (simulated), 2.264.000 đ làm lại (simulated), 978 việc thành công và khoảng 4.472 đ mỗi việc thành công.
+- Chạy bằng môi trường Python 3.12 của dự án; ba phép thử A1 đạt. Kết quả A2 gồm 245.585 đ tiền token, 84.000 đ tiền tool, 1.780.000 đ xem lại (simulated), 2.264.000 đ làm lại (simulated), 978 việc thành công và khoảng 4.472 đ mỗi việc thành công.
 
 ## 5. Công cụ AI đã dùng
 
