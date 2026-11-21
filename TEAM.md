@@ -5,7 +5,7 @@
 - Tên nhóm: STT
 - Lớp: L3A
 - Repo nhóm: `K5-L3A-DAY13-STT-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt:
+- URL repo, nhánh nộp, commit chốt: https://github.com/HaMThang/K5-L3A-DAY13-STT-LaunchEconomics
 
 ## Thành viên
 
