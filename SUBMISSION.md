@@ -67,8 +67,7 @@ Các mốc giờ trong [CHECKPOINTS.md](CHECKPOINTS.md) là checkpoint tại l�
 
 ## Deadline (GMT+7)
 
-- Lab **sáng**: nộp trước **23h59 GMT+7** ngày lab.
-- Lab **chiều** (lịch mẫu 14:00–18:00) hoặc **tối**: nộp trước **11h59 GMT+7** ngày hôm sau.
+- Lab **sáng** và lab **chiều** (lịch mẫu 14:00–18:00): nộp trước **23h59 GMT+7** ngày lab.
 - Coach có thể gia hạn ≤ 48h nếu có lý do chính đáng; nếu gia hạn thì theo thông báo của coach.
 - Sửa sau deadline phải tạo commit mới; xem [RULES.md](RULES.md).
 
