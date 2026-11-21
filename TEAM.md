@@ -2,8 +2,8 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Lớp: L3A hoặc L3B
+- Tên nhóm: 
+- Lớp: L3A
 - Repo nhóm: `K5-L3A-DAY13-TenNhom-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
 - URL repo, nhánh nộp, commit chốt:
 
@@ -11,8 +11,8 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
-|   2 |        |      |       |        |         |
+|   1 |  Hà Minh Thắng      |  2A202603676    |       |        |         |
+|   2 |   Lê Hoàng Sơn      |  2A202603662    |       |        |         |
 |   3 |        |      |       |        |         |
 |   4 |        |      |       |        |         |
 
