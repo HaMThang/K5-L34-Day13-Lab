@@ -144,6 +144,19 @@ Số để tự đối chiếu:
 
 Trả lời hai câu: chi phí mỗi việc thành công gấp **16,3 lần** hoá đơn chia số yêu cầu. Khoản lớn nhất là **làm lại, 51,8%** [simulated], tiếp theo là xem lại 40,7% [simulated]. Giờ nhân viên chiếm 92,5% tổng chi phí. Nếu số của bạn chỉ gấp 1–2 lần hoá đơn, bạn đã quên giờ của nhân viên.
 
+**Lưu ý khi so với 12.000 đ.** Con số 4.472 đ chỉ chia cho việc trợ lý làm xong. Nó **chưa tính** phần nhân viên làm thay 148 ca `chuyen_nhan_vien` (các ca này có 0 phút trong cột simulated). Nếu so với nhân viên tự làm, dùng chi phí cả hệ thống trên mỗi yêu cầu: (4.373.585 + 222 × 12.000) / 1.200 = **5.865 đ/yêu cầu = 0,49× của 12.000 đ** [simulated]. Đừng viết "rẻ bằng 0,37×" nếu chưa cộng phần chuyển nhân viên.
+
+### A4 · Chi phí cố định (5 phút)
+
+Đề cho chi phí cố định 40 triệu đ/tháng, nhưng A2 không có khoản này. Hãy cộng nó vào chi phí mỗi việc thành công trong phạm vi pilot (noi_dia + hang_nang):
+
+1.  Tỉ lệ thành công trong phạm vi: 900 / 1.200 yêu cầu của mẫu → số việc thành công mỗi tháng ở quy mô đầy đủ = 45.000 × 900 / 1.200 = **33.750**.
+2.  Chi phí cố định mỗi việc = 40.000.000 / 33.750 = **1.185 đ**.
+3.  Chi phí mỗi việc thành công trong phạm vi = 3.072.513 / 900 = 3.414 đ → cộng cố định = **4.599 đ = 0,38×** [simulated].
+4.  Khối lượng giảm một nửa (ví dụ giai đoạn pilot) thì cố định thành 2.370 đ/việc → 5.784 đ = 0,48×.
+
+Ý nghĩa: chi phí cố định không đổi kết luận ở quy mô đầy đủ, nhưng tăng mạnh khi khối lượng nhỏ. Hồ sơ launch phải nói rõ con số đã cộng cố định hay chưa, và ở khối lượng nào.
+
 ### A3 · Tách theo loại yêu cầu (10 phút)
 
 Gọi `mo_hinh(runs, reqs[reqs.loai == loai])` cho từng loại. Hàm đã lọc runs theo request_id nên không cần lọc tay.
@@ -226,6 +239,8 @@ Chỉ lấy noi_dia và hang_nang (982 yêu cầu). Các bước:
 2.  Đếm ca lam_lai: 48, mỗi ca làm lại 9 phút → 864.000 đ.
 3.  Cộng token + tool của mọi lần chạy thuộc 982 yêu cầu: 224.513 đ.
 4.  Chia tổng 10.568.513 đ cho 900 việc thành công → **11.743 đ = 0,98× của 12.000 đ** [simulated].
+
+**Độ nhạy theo phút làm lại.** Đề cho 9 phút/ca, nhưng cột `phut_lam_lai_simulated` trung bình **15,3 phút/ca** trên toàn bộ ca lam_lai (trung vị 14,5). Thay 9 bằng 15,3: 48 × 15,3 × 2.000 = 1.468.800 đ → tổng 11.173.313 đ → **12.414 đ = 1,03×** [simulated], tức xem lại 100% còn đắt hơn nhân viên tự làm. Mức hoà vốn: mỗi lần xem lại phải ≤ 5,1 phút (với 9 phút làm lại) hoặc ≤ 4,8 phút (với 15,3 phút). Ghi cả hai con số khi báo cáo B4.
 
 Ý nghĩa: xem lại 100% thì trợ lý gần như không tiết kiệm được gì, vì tiền xem lại chiếm 90% chi phí. Pilot phải học được tỉ lệ xem lại có thể giảm an toàn xuống mức nào, và mỗi lần xem lại có ngắn hơn 5 phút được không.
 
@@ -419,7 +434,8 @@ Lấy số trực tiếp từ bảng độ nhạy. Ít nhất hai dòng, ví d�
 | Rủi ro | Tác động đã tính | Dấu hiệu theo dõi | Hành động | Người phụ trách |
 |----|----|----|----|----|
 | Số ca làm lại tăng gấp đôi | +51,8%, lên 6.787 đ [sim] | Tỉ lệ làm lại theo tuần > 7% (đợt chạy thử: 4,9% trong phạm vi) | Thu hẹp về noi_dia, rà 20 trace làm lại | PM trợ lý hoàn phí |
-| Phải xem lại 100% kéo dài | 11.743 đ = 0,98× nhân viên tự làm [sim] | % yêu cầu được xem lại còn > 50% cuối bước 0.25 | Giảm xem lại theo bậc khi tỉ lệ sửa + bỏ < 15% | Trưởng nhóm CSKH |
+| Phải xem lại 100% kéo dài | 11.743 đ = 0,98× (12.414 đ = 1,03× nếu làm lại 15,3 phút như dữ liệu) [sim] | % yêu cầu được xem lại còn > 50% cuối bước 0.25 | Giảm xem lại theo bậc khi tỉ lệ sửa + bỏ < 15% | Trưởng nhóm CSKH |
+| Khối lượng thấp hơn dự kiến | Cố định 40 triệu/tháng: +1.185 đ/việc ở 45.000 yc/tháng, +2.370 đ/việc nếu còn một nửa [sim] | Số việc thành công theo tuần < 50% kế hoạch | Không mở rộng pilot, xem lại hợp đồng chi phí cố định | PM trợ lý hoàn phí |
 
 ### E3 · Hồ sơ launch v0 (8 phút)
 

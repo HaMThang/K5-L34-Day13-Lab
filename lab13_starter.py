@@ -39,11 +39,13 @@ def kiem_tra_dap_an_biet_truoc():
 
 
 # ---------- Nhiệm vụ A2 · Mô hình chi phí từ trace ----------
-def mo_hinh(runs, reqs):
+def mo_hinh(runs, reqs, gia_vao=26, gia_ra=130, gia_tool=15, luong_phut=2000,
+            he_so_xem_lai=1.0, he_so_lam_lai=1.0, max_lan_chay=None):
     """Trả về dict gồm: token, tool, xem_lai, lam_lai, tong, thanh_cong, cps (chi phí mỗi việc thành công).
     - token, tool: cộng trên MỌI lần chạy trong runs, kể cả lần lỗi.
     - xem_lai, lam_lai: số phút (cột *_simulated) × LUONG_PHUT. Đây là số GIẢ LẬP, phải ghi nhãn simulated khi báo cáo.
     - thanh_cong: số yêu cầu có ket_qua == 'thanh_cong'.
+    - Các tham số giá/hệ số/max_lan_chay dùng cho Nhiệm vụ B (độ nhạy, giới hạn số lần chạy); giữ mặc định ở A2.
     """
     raise NotImplementedError('VIẾT Ở ĐÂY')
 
