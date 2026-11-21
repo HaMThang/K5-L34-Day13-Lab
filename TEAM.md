@@ -12,8 +12,8 @@
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 |  Hà Minh Thắng      |  2A202603676    |haminhthang1213@gmail.com      |        |  Người viết code & gán nhãn 1      |
-|   2 |   Lê Hoàng Sơn      |  2A202603662    | leson121105@gmail.com      |        |  Người kiểm số        |
-|   3 |     Hồ Sỹ Tùng   |    2A202603650   |       |        |  Người giữ hồ sơ & gán nhãn 2       |
+|   2 |   Lê Hoàng Sơn      |  2A202603662    | leson121105@gmail.com      |        |     Người giữ hồ sơ & gán nhãn 2            |
+|   3 |     Hồ Sỹ Tùng   |    2A202603650   |       |        |Người kiểm số  |
 |   4 |        |      |       |        |         |
 
 Bốn vai của lab:
