@@ -34,7 +34,7 @@ Chưa làm (sẽ cập nhật khi xong): gắn nhãn 20 ca lỗi, `pilot_plan.ya
 
 - Công cụ: Claude Code (trong VS Code).
 - Dùng vào việc: đọc đề và các file hướng dẫn để nắm phần việc, dựng khung `chi_so.md` và `ho_so_launch_v0.md`, và điền bản nháp báo cáo này.
-- Cách tự kiểm tra: ba chỉ số E1 được tính bằng một đoạn pandas chạy trực tiếp trên CSV, rồi đối chiếu với số trong `docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md`; cả ba khớp. Các số phụ thuộc cột `_simulated` hoặc `src/lab13.py` chưa được điền; để `[chờ Người 1]` cho tới khi người viết code chốt. Đã chạy `grep -rni production report/team`, không có kết quả.
+- Cách tự kiểm tra: ba chỉ số E1 được tính bằng một đoạn pandas chạy trực tiếp trên CSV, rồi đối chiếu với số trong `docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md`; cả ba khớp. Các số phụ thuộc cột `_simulated` hoặc `src/lab13.py` chưa được điền; để `[chờ Người 1]` cho tới khi người viết code chốt. Đã grep toàn bộ `report/team` để kiểm tra không dùng từ bị cấm theo quy tắc 5 của lab, không có kết quả.
 
 ## 6. Tự đánh giá
 
