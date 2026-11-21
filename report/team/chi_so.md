@@ -1,6 +1,6 @@
 # Đặc tả chỉ số, event và rủi ro kinh tế · Nhiệm vụ E1, E2
 
-Số ở bảng E1 tính trực tiếp từ `src/logix_requests.csv` (1.200 yêu cầu, đọc với `keep_default_na=False`). Ba chỉ số này không dùng cột `_simulated`. Ô ghi `[chờ Người 1]` là số lấy từ `src/lab13.py`, điền sau khi Người 1 chốt.
+Số ở bảng E1 tính trực tiếp từ `src/logix_requests.csv` (1.200 yêu cầu, đọc với `keep_default_na=False`). Ba chỉ số này không dùng cột `_simulated`. Số ở bảng E2 lấy từ `bang_chi_phi.md` (A4, B1, B4), do `src/lab13.py` tính.
 
 ## E1 · Đặc tả chỉ số
 
@@ -48,6 +48,6 @@ Số tham chiếu cho ngưỡng an toàn: tỉ lệ mở lại 7 ngày trong ph�
 
 | Rủi ro | Tác động đã tính | Dấu hiệu theo dõi | Hành động | Người phụ trách |
 | --- | --- | --- | --- | --- |
-| Số ca làm lại tăng gấp đôi | [chờ Người 1: dòng B1 "Số ca làm lại gấp đôi", % và đ] [simulated] | Tỉ lệ `staff_rework_completed` theo tuần vượt 7% (đợt chạy thử: 4,89% trong phạm vi `noi_dia` + `hang_nang`) | Thu hẹp về `noi_dia`, rà 20 trace làm lại | PM trợ lý hoàn phí |
-| Phải xem lại 100% kéo dài | [chờ Người 1: kết quả B4, cả mức 9 phút và 15,3 phút làm lại, so với 12.000 đ] [simulated] | % yêu cầu được xem lại còn trên 50% cuối bước rollout 0,25 | Giảm xem lại theo bậc khi tỉ lệ sửa + bỏ dưới 15% | Trưởng nhóm CSKH |
-| Khối lượng thấp hơn dự kiến, chi phí cố định 40 triệu đ/tháng chia cho ít việc | [chờ Người 1: kết quả A4, ở 45.000 yêu cầu/tháng và ở một nửa] [simulated] | Số việc thành công theo tuần dưới 50% kế hoạch | Không mở rộng pilot, xem lại hợp đồng chi phí cố định | PM trợ lý hoàn phí |
+| Số ca làm lại tăng gấp đôi | +51,8%: chi phí mỗi việc thành công từ 4.472 đ lên 6.787 đ (B1) [simulated] | Tỉ lệ `staff_rework_completed` theo tuần vượt 7% (đợt chạy thử: 4,89% trong phạm vi `noi_dia` + `hang_nang`) | Thu hẹp về `noi_dia`, rà 20 trace làm lại | PM trợ lý hoàn phí |
+| Phải xem lại 100% kéo dài | 11.743 đ/việc = 0,98× của 12.000 đ (làm lại 9 phút/ca); 12.415 đ = 1,03× nếu làm lại 15,3 phút/ca như dữ liệu (B4) [simulated] | % yêu cầu được xem lại còn trên 50% cuối bước rollout 0,25 | Giảm xem lại theo bậc khi tỉ lệ sửa + bỏ dưới 15% | Trưởng nhóm CSKH |
+| Khối lượng thấp hơn dự kiến, chi phí cố định 40 triệu đ/tháng chia cho ít việc | Cố định cộng thêm 1.185 đ/việc ở 45.000 yêu cầu/tháng (tổng 4.599 đ = 0,38×) và 2.370 đ/việc nếu còn một nửa (tổng 5.784 đ = 0,48×) (A4) [simulated] | Số việc thành công theo tuần dưới 50% kế hoạch | Không mở rộng pilot, xem lại hợp đồng chi phí cố định | PM trợ lý hoàn phí |
