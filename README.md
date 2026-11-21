@@ -31,7 +31,6 @@ Bộ hồ sơ phải trả lời bốn câu hỏi:
 | `lab13_starter.py` | File khởi đầu: hằng số giá, khung hàm và ba phép thử đáp án biết trước |
 | `logix_runs.csv` | 1.624 lần chạy của agent: `run_id, request_id, trace_id, attempt, tokens_in, tokens_out, tool_calls, status` |
 | `logix_requests.csv` | 1.200 yêu cầu: `depot, staff_id, loai, so_tien_vnd, so_lan_chay, ket_qua, duoc_xem_lai, quyet_dinh_xem_lai, phut_xem_lai_simulated, phut_lam_lai_simulated, dong_trong_24h, mo_lai_trong_7_ngay` |
-| `example.zip` | **Bài làm mẫu** đầy đủ (thư mục `bai_nop/`): `lab13.py`, các bảng `.md`, `pilot_plan.yaml`, hồ sơ launch v0 |
 
 ### Giá trị của một số cột
 
@@ -131,16 +130,6 @@ Nộp một thư mục tên `lop_nhom` (ví dụ `L3A_nhom04`) trước 18:00:
 | Hội đồng: đề xuất khớp bằng chứng · số giả lập và phạm vi · pilot ra được quyết định (mỗi tiêu chí 0 / 5 / 10) | 30 | Nhóm khác |
 
 Một đề xuất **No-go có lý do bằng số** được điểm cao hơn một đề xuất **Go bỏ qua con số bất lợi**.
-
-## Bài làm mẫu
-
-`example.zip` chứa một bộ bài làm hoàn chỉnh. Nên tự làm trước rồi mới mở để đối chiếu.
-
-```bash
-unzip example.zip -d example && cd example/bai_nop
-cp ../../logix_*.csv .               # lab13.py đọc CSV ở cùng thư mục hoặc thư mục cha
-python3 lab13.py
-```
 
 ## Tài liệu tham khảo
 
