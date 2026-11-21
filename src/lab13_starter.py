@@ -1,7 +1,7 @@
 """Lab 13 · Định giá agent và lập kế hoạch pilot (Gate 2a) — file khởi đầu cho học viên.
 Chạy trong thư mục src/: python3 lab13_starter.py   (cần pandas; Nhiệm vụ D cần thêm statsmodels)
 Không cần khoá API. Điền các chỗ ghi VIẾT Ở ĐÂY (đánh dấu TODO CP1…CP4). Dữ liệu trong hai file CSV là giả lập.
-Bài nộp là src/lab13.py: copy file này thành lab13.py rồi viết vào lab13.py (xem CHECKPOINTS.md).
+Đây là bản gốc để đối chiếu, không sửa. Viết bài vào src/lab13.py (bản sao giống hệt file này).
 """
 import math
 import pandas as pd
