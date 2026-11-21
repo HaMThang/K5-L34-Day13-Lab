@@ -11,9 +11,9 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |  Hà Minh Thắng      |  2A202603676    |       |        |         |
-|   2 |   Lê Hoàng Sơn      |  2A202603662    |       |        |         |
-|   3 |        |      |       |        |         |
+|   1 |  Hà Minh Thắng      |  2A202603676    |       |        |  Người viết code & gán nhãn 1      |
+|   2 |   Lê Hoàng Sơn      |  2A202603662    |       |        |  Người kiểm số        |
+|   3 |     Hồ Sỹ Tùng   |    2A202603650   |       |        |  Người giữ hồ sơ & gán nhãn 2       |
 |   4 |        |      |       |        |         |
 
 Bốn vai của lab:

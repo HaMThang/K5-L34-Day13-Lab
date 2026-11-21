@@ -41,7 +41,7 @@ def kiem_tra_dap_an_biet_truoc():
     assert abs(so_lan_chay_ky_vong(0.8, 2) - 1.20) < 1e-9, 'p=0,8, tối đa 2 lần → 1,20 lần chạy'
     assert abs(so_lan_chay_ky_vong(0.8) - 1.25) < 1e-9, 'p=0,8, chạy đến khi đúng → 1,25 lần chạy'
     assert abs(he_so_chi_phi_moi_viec_thanh_cong(0.8, 3) - 1.25) < 1e-9, 'p=0,8, tối đa 3 lần → 1,25 lần giá một lần chạy'
-    print('Ba phép thử đáp án biết trước: ĐẠT')
+    print('A1 known-answer checks: PASS')
 
 
 # ---------- Nhiệm vụ A2 · Mô hình chi phí từ trace ----------
@@ -104,12 +104,12 @@ if __name__ == '__main__':
     reqs = pd.read_csv('logix_requests.csv', keep_default_na=False)
     kiem_tra_dap_an_biet_truoc()
 
-    print('\nA2 · Mô hình chi phí')
+    print('\nA2 - Cost model')
     ket_qua = mo_hinh(runs, reqs)
     for ten, gia_tri in ket_qua.items():
         print(f'{ten:12s} {gia_tri:>14,.0f}')
 
-    print('\nA3 · Chi phí theo loại yêu cầu')
+    print('\nA3 - Cost by request type')
     print(f'{"loai":12s} {"so_yc":>8s} {"thanh_cong":>12s} '
           f'{"ty_le":>9s} {"lan_chay/yc":>13s} {"cps":>12s} {"so_voi_12000":>14s}')
     for loai in reqs['loai'].unique():
@@ -123,34 +123,34 @@ if __name__ == '__main__':
               f'{ket_qua_loai["cps"]:12,.0f} '
               f'{ket_qua_loai["cps"] / BASELINE:13.2f}x')
 
-    print('\nB1 · Độ nhạy (chi phí mỗi việc thành công)')
+    print('\nB1 - Sensitivity (cost per successful request)')
     kich_ban = {
-        'Giá token gấp đôi': {'gia_vao': 52, 'gia_ra': 260},
-        'Giá token giảm một nửa': {'gia_vao': 13, 'gia_ra': 65},
-        'Xem lại gấp đôi': {'he_so_xem_lai': 2},
-        'Xem lại giảm một nửa': {'he_so_xem_lai': 0.5},
-        'Làm lại gấp đôi': {'he_so_lam_lai': 2},
-        'Làm lại giảm một nửa': {'he_so_lam_lai': 0.5},
-        'Lương tăng 25%': {'luong_phut': 2500},
-        'Tối đa 2 lần chạy': {'max_lan_chay': 2},
-        'Chỉ 1 lần chạy': {'max_lan_chay': 1},
+        'Token price x2': {'gia_vao': 52, 'gia_ra': 260},
+        'Token price /2': {'gia_vao': 13, 'gia_ra': 65},
+        'Review x2': {'he_so_xem_lai': 2},
+        'Review /2': {'he_so_xem_lai': 0.5},
+        'Rework x2': {'he_so_lam_lai': 2},
+        'Rework /2': {'he_so_lam_lai': 0.5},
+        'Staff wage +25%': {'luong_phut': 2500},
+        'Retry limit 2': {'max_lan_chay': 2},
+        'Retry limit 1': {'max_lan_chay': 1},
     }
     cps_goc = ket_qua['cps']
-    print(f'{"Kịch bản":26s} {"cps":>12s} {"thay_doi":>11s}')
+    print(f'{"Scenario":26s} {"cps":>12s} {"change":>11s}')
     for ten, tham_so in kich_ban.items():
         cps = mo_hinh(runs, reqs, **tham_so)['cps']
         thay_doi = (cps / cps_goc - 1) * 100
         print(f'{ten:26s} {cps:12,.0f} {thay_doi:+10.1f}%')
 
-    print('\nB2 · Giá token gấp đôi và xem lại gấp đôi')
+    print('\nB2 - Double token price and review')
     cps_cap = mo_hinh(
         runs, reqs, gia_vao=52, gia_ra=260, he_so_xem_lai=2
     )['cps']
-    print(f'{cps_cap:,.0f} đ ({(cps_cap / cps_goc - 1) * 100:+.1f}%)')
+    print(f'{cps_cap:,.0f} VND ({(cps_cap / cps_goc - 1) * 100:+.1f}%)')
 
-    print('\nB3 · Chi phí cả hệ thống theo giới hạn số lần chạy')
-    print(f'{"gioi_han":>10s} {"tong_tro_ly":>16s} '
-          f'{"khong_thanh_cong":>18s} {"tong_he_thong":>16s} {"cps":>12s}')
+    print('\nB3 - Total system cost by retry limit')
+    print(f'{"limit":>10s} {"agent_total":>16s} '
+          f'{"unsuccessful":>18s} {"system_total":>16s} {"cps":>12s}')
     for gioi_han in (1, 2, 3):
         ket_qua_gioi_han = mo_hinh(runs, reqs, max_lan_chay=gioi_han)
         khong_thanh_cong = len(reqs) - ket_qua_gioi_han['thanh_cong']
@@ -161,7 +161,7 @@ if __name__ == '__main__':
               f'{khong_thanh_cong:18,d} {tong_he_thong:16,.0f} '
               f'{ket_qua_gioi_han["cps"]:12,.0f}')
 
-    print('\nB4 · Xem lại 100% (noi_dia + hang_nang)')
+    print('\nB4 - 100% review (noi_dia + hang_nang)')
     pham_vi = reqs['loai'].isin(['noi_dia', 'hang_nang'])
     reqs_pham_vi = reqs[pham_vi]
     runs_pham_vi = runs[runs['request_id'].isin(reqs_pham_vi['request_id'])]
@@ -179,11 +179,11 @@ if __name__ == '__main__':
         cps_xem_lai_100 = (
             chi_phi_token_tool + chi_phi_xem_lai_100 + chi_phi_lam_lai
         ) / viec_thanh_cong
-        print(f'Làm lại {phut_lam_lai:g} phút/ca: '
-              f'{cps_xem_lai_100:,.0f} đ/việc '
-              f'({cps_xem_lai_100 / BASELINE:.2f}x nhân viên)')
+        print(f'Rework {phut_lam_lai:g} min/case: '
+              f'{cps_xem_lai_100:,.0f} VND/request '
+              f'({cps_xem_lai_100 / BASELINE:.2f}x staff)')
 
-    print('\nD1 · Cỡ mẫu')
+    print('\nD1 - Sample size')
     from statistics import NormalDist
 
     def co_mau(p1, p2, alpha=0.05, power=0.8):
@@ -211,11 +211,11 @@ if __name__ == '__main__':
         m_20_nhan_vien += 1
     de_6_diem = 1 + (m_20_nhan_vien - 1) * 0.02
 
-    print(f'a) Chia theo yêu cầu, +5 điểm: {n_5_diem:,} mỗi nhóm')
-    print(f'b) Theo nhân viên, 75 yêu cầu/người: DE={de_75:.2f}, '
-          f'{n_nhan_vien_75:,} mỗi nhóm, '
-          f'{math.ceil(n_nhan_vien_75 / 75)} nhân viên mỗi nhóm')
-    print(f'c) 20 nhân viên mỗi nhóm: tối đa {20 / 0.02:,.0f} mẫu hiệu dụng')
-    print(f'd) 6 depot mỗi nhóm: tối đa {6 / 0.02:,.0f} mẫu hiệu dụng')
-    print(f'e) +6 điểm, {n_6_diem:,} mỗi nhóm: '
-          f'{m_20_nhan_vien} yêu cầu/nhân viên, DE={de_6_diem:.2f}')
+    print(f'a) Request-level, +5 points: {n_5_diem:,} per arm')
+    print(f'b) Staff clusters, 75 requests/staff: DE={de_75:.2f}, '
+          f'{n_nhan_vien_75:,} per arm, '
+          f'{math.ceil(n_nhan_vien_75 / 75)} staff per arm')
+    print(f'c) 20 staff per arm: max {20 / 0.02:,.0f} effective samples')
+    print(f'd) 6 depots per arm: max {6 / 0.02:,.0f} effective samples')
+    print(f'e) +6 points, {n_6_diem:,} per arm: '
+          f'{m_20_nhan_vien} requests/staff, DE={de_6_diem:.2f}')
