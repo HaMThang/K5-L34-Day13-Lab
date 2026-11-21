@@ -2,17 +2,17 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm: 
+- Tên nhóm: STT
 - Lớp: L3A
-- Repo nhóm: `K5-L3A-DAY13-TenNhom-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
+- Repo nhóm: `K5-L3A-DAY13-STT-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
 - URL repo, nhánh nộp, commit chốt:
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |  Hà Minh Thắng      |  2A202603676    |       |        |  Người viết code & gán nhãn 1      |
-|   2 |   Lê Hoàng Sơn      |  2A202603662    |       |        |  Người kiểm số        |
+|   1 |  Hà Minh Thắng      |  2A202603676    |haminhthang1213@gmail.com      |        |  Người viết code & gán nhãn 1      |
+|   2 |   Lê Hoàng Sơn      |  2A202603662    | leson121105@gmail.com      |        |  Người kiểm số        |
 |   3 |     Hồ Sỹ Tùng   |    2A202603650   |       |        |  Người giữ hồ sơ & gán nhãn 2       |
 |   4 |        |      |       |        |         |
 
